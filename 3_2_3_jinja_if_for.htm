@@ -1,0 +1,7 @@
+<ul>
+	{% for num in numbers %}
+		<li>{{ loop.index }} - {{ num }}</li>
+	{% else %}
+		<li>"Численная последовательность не существует"</li>
+	{% endfor %}
+</ul>
