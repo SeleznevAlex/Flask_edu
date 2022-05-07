@@ -1,0 +1,10 @@
+{% for key, value in numbers.items() %}
+	{%- if key|int != 0 -%}
+		{% if key|int <= value %}
+			{{- key|int }}
+		{%- else -%}
+			{{ value -}}
+		{% endif %}
+	{%- endif -%}
+{%- endfor -%}
+                        
