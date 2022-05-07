@@ -1,0 +1,10 @@
+{%- macro get_solution() -%}
+	{% for key, value in kwargs.items() %}
+        {% if key|int == varargs|sum %}
+            {{value}}
+        {% endif %}
+    {% endfor %}
+    {% if varargs|length > 0 %}
+        {{ get_solution(*varargs[:-1], **kwargs) }}
+    {% endif %}
+{% endmacro %}
