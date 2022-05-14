@@ -4,9 +4,9 @@
 		{% if field.name != "submit" %}
 		    {{ field.label }}
 		{% endif %}
-        {{ field }}
-        {% for error in field.errors %}
-            {{ error }}
-        {% endfor %}
+        	{{ field }}
+		{% for error in field.errors %}
+        		{{ error }}
+        	{% endfor %}
 	{% endfor %}
 </form>
